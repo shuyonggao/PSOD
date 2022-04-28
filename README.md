@@ -8,7 +8,6 @@
 
 # Saliency map & Trained model
 * saliency maps: [google](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing)
-* first round trained model: [google]()
-* second round trained model: [google](https://drive.google.com/file/d/1S8za3FiPalP0wRqazjj060wm1Sc3XwrB/view?usp=sharing)
+* trained model: [google](https://drive.google.com/file/d/1S8za3FiPalP0wRqazjj060wm1Sc3XwrB/view?usp=sharing)
 
 
