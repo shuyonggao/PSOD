@@ -1,0 +1,6 @@
+models/imagenet21k2012_R50+ViT-B_16.npz
+
+out_transformer/
+tem_see/
+eval/
+__pycache__/
