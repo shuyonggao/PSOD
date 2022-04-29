@@ -2,12 +2,12 @@
 #coding=utf-8
 
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = "2,3"
+os.environ['CUDA_VISIBLE_DEVICES'] = "1,2,3"
 
 import sys
 import datetime
 
-import dataset_PIL
+import dataset_2nd
 
 import torch
 import torch.nn as nn
@@ -59,7 +59,7 @@ loss_lsc_kernels_desc_defaults = [{"weight": 1, "xy": 6, "rgb": 0.1}]
 loss_lsc_radius = 5
 def train(Dataset, Network):
 
-    cfg    = Dataset.Config(datapath='/home/gaosy/DATA/Gao_DUTS_TR', savepath='./out_transformer', mode='train', batch=2, lr=0.0025, momen=0.9, decay=5e-4, epoch=20) # batch=28 # lr = 0.03 -》 0.005  0.003
+    cfg    = Dataset.Config(datapath='/home/gaosy/DATA/Gao_DUTS_TR', savepath='./out_2nd', mode='train', batch=21, lr=0.0025, momen=0.9, decay=5e-4, epoch=20) # batch=28 # lr = 0.03 -》 0.005  0.003
     data   = Dataset.Data(cfg)
     loader = DataLoader(data, collate_fn=data.collate, batch_size=cfg.batch, shuffle=True, pin_memory=True, num_workers=8)  
 
@@ -145,5 +145,5 @@ def train(Dataset, Network):
 
 if __name__=='__main__':
     set_seed(7)
-    train(dataset_PIL, VisionTransformer)
+    train(dataset_2nd, VisionTransformer)
 

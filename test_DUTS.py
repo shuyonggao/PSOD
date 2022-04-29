@@ -55,17 +55,15 @@ class Test(object):
                 out, _ = self.net(image)
                 pred = torch.sigmoid(out[0, 0]).cpu().numpy() * 255
                 pred = cv2.resize(pred, dsize=(W,H), interpolation=cv2.INTER_LINEAR)
-                head = './eval/maps/' + self.cfg.datapath.split('/')[-1]   
+                # head = './DataStorage/DUTS-TR_transformer/' + self.cfg.datapath.split('/')[-1]   
+                head = './DataStorage/DUTS-TR_transformer/'   
                 if not os.path.exists(head):
                     os.makedirs(head)
                 cv2.imwrite(head + '/' + name[0] + '.png', np.round(pred))
 
 
 if __name__=='__main__':
-    for path in [ '/home/gaosy/DATA/GT/DUT_O',
-                '/home/gaosy/DATA/GT/ECSSD', '/home/gaosy/DATA/GT/PASCAL_S', 
-                '/home/gaosy/DATA/GT/DUTS_test', '/home/gaosy/DATA/GT/HKU_IS']:  # '/home/gaosy/DATA/DUTS/DUTS-TR'
-        # t = Test(dataset_1st, VisionTransformer, path, './out_2nd/'+'model-20')
-        t = Test(dataset_1st, VisionTransformer, path, './out_2nd/'+'model-final')
+    for path in ['/home/gaosy/DATA/DUTS/DUTS-TR']:  # 
+        t = Test(dataset_1st, VisionTransformer, path, './out_1st/'+'model-20')
         t.save()
 
