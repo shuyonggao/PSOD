@@ -46,7 +46,7 @@ cd PSOD
 
 1. Set the path of the test data in ```test.py```.
 
-2. Creat "out_2nd" folder and put the [trained model](https://drive.google.com/file/d/1S8za3FiPalP0wRqazjj060wm1Sc3XwrB/view?usp=sharing) into "out_2nd" folder.
+2. Create "out_2nd" folder and put the [trained model](https://drive.google.com/file/d/1S8za3FiPalP0wRqazjj060wm1Sc3XwrB/view?usp=sharing) into "out_2nd" folder.
 
     Run ```python test.py```
 
@@ -63,3 +63,8 @@ cd PSOD
   year={2022}
 }
 ```
+
+# Acknowledgement
+[Weakly-Supervised Salient Object Detection via Scribble Annotations](https://github.com/JingZhang617/Scribble_Saliency)
+[Structure-Consistent Weakly Supervised Salient Object Detection with Local Saliency Coherence]()
+[Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers]()
