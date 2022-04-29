@@ -48,7 +48,7 @@ cd PSOD
 
 1. Set the path of the test data in ```test.py```.
 
-2. Creat "out_2nd" folder and put the [trained model](https://drive.google.com/file/d/1S8za3FiPalP0wRqazjj060wm1Sc3XwrB/view?usp=sharing) into "out_2nd" folder.
+2. Create "out_2nd" folder and put the [trained model](https://drive.google.com/file/d/1S8za3FiPalP0wRqazjj060wm1Sc3XwrB/view?usp=sharing) into "out_2nd" folder.
 
     Run ```python test.py```
 
