@@ -9,7 +9,3 @@
 # python utils/NSS_2nd_GtMask.py     # step4 
 
 python train_2nd_round.py  # step5
-
-
-
-

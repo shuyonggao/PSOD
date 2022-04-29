@@ -65,3 +65,11 @@ cd PSOD
   year={2022}
 }
 ```
+<<<<<<< 5ab6a37b21713bc0e6e7912d5563d5c75fa66cd3
+=======
+
+# Acknowledgement
+[Weakly-Supervised Salient Object Detection via Scribble Annotations](https://github.com/JingZhang617/Scribble_Saliency)
+[Structure-Consistent Weakly Supervised Salient Object Detection with Local Saliency Coherence]()
+[Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers]()
+>>>>>>> update file

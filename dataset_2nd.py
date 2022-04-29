@@ -252,7 +252,7 @@ if __name__ == '__main__':
 
         plt.figure()
         plt.subplot(1, 3, 1)
-        plt.imshow(image)  # 0-1的小数，或者0-255的整数
+        plt.imshow(image)  
         plt.subplot(1, 3, 2)
         plt.imshow(mask)
         plt.subplot(1, 3, 3)
