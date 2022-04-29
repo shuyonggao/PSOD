@@ -10,7 +10,6 @@
 
 python train_2nd_round.py  # step5
 
-python test.py  # step6  test step, you should set the path of the test images
 
 
 

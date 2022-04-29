@@ -187,8 +187,8 @@ class Data(Dataset):
         image = Image.open(self.cfg.datapath + '/image/' + name + '.jpg').convert('RGB')
 
         if self.cfg.mode == 'train':
-            gt   = Image.open('./filled_transformer_crf_gt/' + name + '.png').convert('L')
-            mask = Image.open('./filled_transformer_crf_mask/' + name + '.png').convert('L')
+            gt   = Image.open('./DataStorage/filled_transformer_crf_gt/' + name + '.png').convert('L')
+            mask = Image.open('./DataStorage/filled_transformer_crf_mask/' + name + '.png').convert('L')
             # gt   = Image.open(self.cfg.datapath + '/filled_img_pseudo_gt/' + name + '.png').convert('L')
             # mask = Image.open(self.cfg.datapath + '/filled_pseudo_mask/' + name + '.png').convert('L')
             edge = Image.open(self.cfg.datapath + '/edge/' + name + '.png').convert('L') # edge  high_threshold
