@@ -65,7 +65,7 @@ if __name__=='__main__':
     for path in [ '/home/gaosy/DATA/GT/DUT_O',
                 '/home/gaosy/DATA/GT/ECSSD', '/home/gaosy/DATA/GT/PASCAL_S', 
                 '/home/gaosy/DATA/GT/DUTS_test', '/home/gaosy/DATA/GT/HKU_IS']:  # '/home/gaosy/DATA/DUTS/DUTS-TR'
-        # t = Test(dataset_1st, VisionTransformer, path, './out_2nd/'+'model-20')
-        t = Test(dataset_1st, VisionTransformer, path, './out_2nd/'+'model-final')
+        t = Test(dataset_1st, VisionTransformer, path, './out_2nd/'+'model-x')
+        # t = Test(dataset_1st, VisionTransformer, path, './out_2nd/'+'model-final')
         t.save()
 

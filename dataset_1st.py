@@ -57,10 +57,6 @@ class RandomRotate(object):
 
 class RandomScaleCrop(object):
     def __init__(self, input_size, scale_factor):
-        """
-        处理的是长宽相同的图像。这里会进行扩张到原图的随机倍数（1～scale_factor），
-        之后进行随机裁剪，得到输入图像大小。
-        """
         self.input_size = input_size
         self.scale_factor = scale_factor
 
@@ -70,7 +66,7 @@ class RandomScaleCrop(object):
 
         o_size = np.random.randint(int(self.input_size * 1), int(self.input_size * self.scale_factor))
         img = img.resize((o_size, o_size), resample=Image.BILINEAR)
-        mask = mask.resize((o_size, o_size), resample=Image.NEAREST)  # mask的放缩使用的是近邻差值
+        mask = mask.resize((o_size, o_size), resample=Image.NEAREST) 
 
         # random crop input_size
         x1 = np.random.randint(0, o_size - self.input_size)
@@ -87,7 +83,6 @@ class ScaleCenterCrop(object):
 
     def __call__(self, img, mask):
         w, h = img.size
-        # 让短边等于剪裁的尺寸
         if w > h:
             oh = self.input_size
             ow = int(1.0 * w * oh / h)
@@ -97,7 +92,6 @@ class ScaleCenterCrop(object):
         img = img.resize((ow, oh), resample=Image.BILINEAR)
         mask = mask.resize((ow, oh), resample=Image.NEAREST)
 
-        # 从放缩后的结果中进行中心剪裁
         w, h = img.size
         x1 = int(round((w - self.input_size) / 2.0))
         y1 = int(round((h - self.input_size) / 2.0))
@@ -115,7 +109,6 @@ class RandomGaussianBlur(object):
         return img, mask
 
 
-###############手写基于numpy的#############################
 class RandomCrop(object):
     def __call__(self, image, gt, mask, edge, grays):
         image = np.array(image)
@@ -156,22 +149,22 @@ class Config(object):
 class Data(Dataset):
     def __init__(self, cfg):
         self.cfg = cfg
-        ###--------训练---------###
+        ###--------train---------###
         self.joint_transform_train = Compose([
             RandomHorizontallyFlip(),
             RandomCrop(),
             # RandomRotate()
-        ])  # 训练中，image 和 mask 一起变化：随机翻转，随机裁剪(多尺度裁剪），随机旋转
+        ])  
         self.image_transform_train = transforms.Compose([
-            #transforms.ColorJitter(0.1, 0.1, 0.1),  # # 随机颜色抖动(亮度、对比度、饱和度)不能加到mask上
+            #transforms.ColorJitter(0.1, 0.1, 0.1),  
             transforms.ToTensor(),
             transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
         ])
         self.mask_transform_train = transforms.ToTensor()  # ->(C,H,W),(0~1)
 
-        ###----------测试----------###
+        ###----------test----------###
         self.image_transform_test = transforms.Compose([
-            transforms.Resize((352, 352)),  # 测试
+            transforms.Resize((352, 352)),  
             transforms.ToTensor(),
             transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
         ])

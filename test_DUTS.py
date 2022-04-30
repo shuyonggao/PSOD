@@ -64,6 +64,7 @@ class Test(object):
 
 if __name__=='__main__':
     for path in ['/home/gaosy/DATA/DUTS/DUTS-TR']:  # 
+        # t = Test(dataset_1st, VisionTransformer, path, './out_1st/'+'model-x')
         t = Test(dataset_1st, VisionTransformer, path, './out_1st/'+'model-20')
         t.save()
 
