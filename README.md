@@ -1,6 +1,7 @@
 # PSOD (Point Saliency)
 # Weakly-Supervised Salient Object Detection Using Point Supervison
 
+
 ![image](https://user-images.githubusercontent.com/34783695/159275127-1a6bd023-5b97-427a-9f5c-4b4854656415.png)
 
 
@@ -19,6 +20,7 @@ cd PSOD
 
 
 # Download P-DUTS Dataset
+![VIZ](https://user-images.githubusercontent.com/34783695/165979177-3ecef77f-d553-4747-97f7-2f7788c2adad.png)
 
 * point supervised DUTS: [google](https://drive.google.com/file/d/1ZV2Bk1nZ3GRqcVvrabybSKT8N-1XsSH8/view?usp=sharing)
 
@@ -26,6 +28,8 @@ cd PSOD
 * saliency maps: [google](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing)
 
 * trained model: [google](https://drive.google.com/file/d/1S8za3FiPalP0wRqazjj060wm1Sc3XwrB/view?usp=sharing)
+
+* R50+ViT-B pretrained model: [google]()
 
 * initial pseudo-labels: [google](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing)
 
@@ -39,7 +43,9 @@ cd PSOD
 
     Run ```python utils/EdgePoint2gt.py```
 
-2. Set the path of the [training images](http://saliencydetection.net/duts/), edge maps and initial pseudo-labels in ```dataset_1st.py```, ```dataset_2nd.py```, ```test_DUTS.py```
+2. Put the [R50+ViT-B pretrained model]() into "models" folder.
+
+3. Set the path of the [training images](http://saliencydetection.net/duts/), edge maps and initial pseudo-labels in ```dataset_1st.py```, ```dataset_2nd.py```, ```test_DUTS.py```
 
     Run ```bash train_nss_retrain.sh```
 # Test Model
@@ -67,4 +73,8 @@ cd PSOD
 # Acknowledgement
 [Weakly-Supervised Salient Object Detection via Scribble Annotations](https://github.com/JingZhang617/Scribble_Saliency)
 [Structure-Consistent Weakly Supervised Salient Object Detection with Local Saliency Coherence]()
+<<<<<<< HEAD
 [Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers]()
+=======
+[Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers]()
+>>>>>>> temp
