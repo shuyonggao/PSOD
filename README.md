@@ -29,7 +29,7 @@ cd PSOD
 
 * trained model: [google](https://drive.google.com/file/d/1S8za3FiPalP0wRqazjj060wm1Sc3XwrB/view?usp=sharing)
 
-* R50+ViT-B pretrained model: [google]()
+* R50+ViT-B pretrained model: [google](https://drive.google.com/file/d/1N9zbAX97GRGnxz122A2W2wjcK-U8dX68/view?usp=sharing)
 
 * initial pseudo-labels: [google](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing)
 
@@ -43,7 +43,7 @@ cd PSOD
 
     Run ```python utils/EdgePoint2gt.py```
 
-2. Put the [R50+ViT-B pretrained model]() into "models" folder.
+2. Put the [R50+ViT-B pretrained model](https://drive.google.com/file/d/1N9zbAX97GRGnxz122A2W2wjcK-U8dX68/view?usp=sharing) into "models" folder.
 
 3. Set the path of the [training images](http://saliencydetection.net/duts/), edge maps and initial pseudo-labels in ```dataset_1st.py```, ```dataset_2nd.py```, ```test_DUTS.py```
 
