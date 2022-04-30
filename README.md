@@ -73,8 +73,5 @@ cd PSOD
 # Acknowledgement
 [Weakly-Supervised Salient Object Detection via Scribble Annotations](https://github.com/JingZhang617/Scribble_Saliency)
 [Structure-Consistent Weakly Supervised Salient Object Detection with Local Saliency Coherence]()
-<<<<<<< HEAD
 [Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers]()
-=======
-[Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers]()
->>>>>>> temp
+
