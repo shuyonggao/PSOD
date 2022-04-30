@@ -29,6 +29,8 @@ cd PSOD
 
 * trained model: [google](https://drive.google.com/file/d/1S8za3FiPalP0wRqazjj060wm1Sc3XwrB/view?usp=sharing)
 
+* R50+ViT-B pretrained model: [google]()
+
 * initial pseudo-labels: [google](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing)
 
 * edge maps: [google](https://drive.google.com/file/d/1Juzi-TZJfrB9iv_4UOYs60qn2VpZ033h/view?usp=sharing)
@@ -41,7 +43,9 @@ cd PSOD
 
     Run ```python utils/EdgePoint2gt.py```
 
-2. Set the path of the [training images](http://saliencydetection.net/duts/), edge maps and initial pseudo-labels in ```dataset_1st.py```, ```dataset_2nd.py```, ```test_DUTS.py```
+2. Put the [R50+ViT-B pretrained model]() into "models" folder.
+
+3. Set the path of the [training images](http://saliencydetection.net/duts/), edge maps and initial pseudo-labels in ```dataset_1st.py```, ```dataset_2nd.py```, ```test_DUTS.py```
 
     Run ```bash train_nss_retrain.sh```
 # Test Model
@@ -65,11 +69,8 @@ cd PSOD
   year={2022}
 }
 ```
-<<<<<<< 5ab6a37b21713bc0e6e7912d5563d5c75fa66cd3
-=======
 
 # Acknowledgement
 [Weakly-Supervised Salient Object Detection via Scribble Annotations](https://github.com/JingZhang617/Scribble_Saliency)
 [Structure-Consistent Weakly Supervised Salient Object Detection with Local Saliency Coherence]()
 [Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers]()
->>>>>>> update file
