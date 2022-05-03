@@ -68,7 +68,7 @@ cd PSOD
 
 
 
-[Point supervison](https://drive.google.com/file/d/1ZV2Bk1nZ3GRqcVvrabybSKT8N-1XsSH8/view?usp=sharing) (json) and [edge maps](https://drive.google.com/file/d/1Juzi-TZJfrB9iv_4UOYs60qn2VpZ033h/view?usp=sharing) (edge) are employed to generate [initial pseudo-labels](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing) (we provided the initial pseudo-labels and you can use it directly for training, or you can run ```python utils/EdgePoint2gt.py```) to make initial pseudo-labels.
+The [Point supervison](https://drive.google.com/file/d/1ZV2Bk1nZ3GRqcVvrabybSKT8N-1XsSH8/view?usp=sharing) (json) and [edge maps](https://drive.google.com/file/d/1Juzi-TZJfrB9iv_4UOYs60qn2VpZ033h/view?usp=sharing) (edge) are employed to generate [initial pseudo-labels](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing) (we provided the initial pseudo-labels and you can use it directly for training, or you can run ```python utils/EdgePoint2gt.py```) to make initial pseudo-labels.
 
 3. We organize all steps into a shell file, you can run ```bash edgepoint2gt_train_nss_retrain.sh``` to complete the entire training process.
 
