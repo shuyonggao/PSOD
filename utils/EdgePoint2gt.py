@@ -1,4 +1,6 @@
 '''
+Adaptive flood filling
+
 generate the initial pseudo labels
 
 edge + point annotation -> gt & mask
@@ -10,10 +12,15 @@ import numpy as np
 import json
 
 
-edge_path = "/home/gaosy/DATA/Gao_DUTS_TR/edge/"
-filled_img_path = '/home/gaosy/DATA/Gao_DUTS_TR/filled_correct_img_gt_r4' # only foreground
-filled_mask_path = '/home/gaosy/DATA/Gao_DUTS_TR/filled_correct_mask_r4'
-json_path = '/home/gaosy/DATA/Gao_DUTS_TR/json'
+# edge_path = "/home/gaosy/DATA/Gao_DUTS_TR/edge/"
+# filled_img_path = '/home/gaosy/DATA/Gao_DUTS_TR/filled_correct_img_gt_r4' # only foreground
+# filled_mask_path = '/home/gaosy/DATA/Gao_DUTS_TR/filled_correct_mask_r4'
+# json_path = '/home/gaosy/DATA/Gao_DUTS_TR/json'
+
+edge_path = "./dataset/edge/"
+filled_img_path = './dataset/filled_correct_img_gt' # only foreground
+filled_mask_path = './dataset/filled_correct_mask'
+json_path = './dataset/json'
 
 
 if not os.path.exists(filled_img_path):
@@ -42,7 +49,7 @@ for file in file_list:
             print(i, ' : ',  seed_point)
 
             mask = np.ones([edge_map.shape[0] + 2, edge_map.shape[1] + 2], np.uint8) * 255
-            cv2.circle(mask, center=seed_point, radius=int(min(edge_map.shape[0], edge_map.shape[1]) / 4), color=0,
+            cv2.circle(mask, center=seed_point, radius=int(min(edge_map.shape[0], edge_map.shape[1]) / 5), color=0,
                        thickness=-1)  # seed_point: (column, row)
 
             cv2.floodFill(edge_map, mask, seed_point, (255, 100, 100), (20, 20, 20), (50, 50, 50),
@@ -64,7 +71,7 @@ for file in file_list:
             print(i, ' : ',  seed_point)
 
             mask = np.ones([edge_map.shape[0] + 2, edge_map.shape[1] + 2], np.uint8) * 255
-            cv2.circle(mask, center=seed_point, radius=int(min(edge_map.shape[0], edge_map.shape[1]) / 4), color=0,
+            cv2.circle(mask, center=seed_point, radius=int(min(edge_map.shape[0], edge_map.shape[1]) / 5), color=0,
                        thickness=-1)
 
             cv2.floodFill(edge_map, mask, seed_point, (255, 100, 100), (20, 20, 20), (50, 50, 50),

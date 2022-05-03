@@ -169,7 +169,7 @@ class Data(Dataset):
             transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
         ])
 
-        with open(cfg.datapath + '/' + cfg.mode + '.txt', 'r') as lines:
+        with open(cfg.datapath + '/train.txt', 'r') as lines:
             self.samples = []
             for line in lines:
                 self.samples.append(line.strip())

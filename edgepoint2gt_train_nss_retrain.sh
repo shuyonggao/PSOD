@@ -1,4 +1,5 @@
 #！/bin/bash
+python utils/EdgePoint2gt.py  # step0
 
 python train_1st_round.py   # step1
 

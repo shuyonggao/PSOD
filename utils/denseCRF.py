@@ -13,7 +13,8 @@ os.environ['CUDA_VISIBLE_DEVICES'] = "2"
 
 
 # set path
-input_path = '/home/gaosy/DATA/Gao_DUTS_TR/image'
+# input_path = '/home/gaosy/DATA/Gao_DUTS_TR/image'
+input_path = './dataset/image'
 sal_path = "./DataStorage/DUTS-TR_transformer/"
 output_path = "./DataStorage/DUTS-TR_transformer_crf/"
 

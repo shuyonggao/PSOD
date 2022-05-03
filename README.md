@@ -24,30 +24,57 @@ cd PSOD
 
 * point supervised DUTS: [google](https://drive.google.com/file/d/1ZV2Bk1nZ3GRqcVvrabybSKT8N-1XsSH8/view?usp=sharing)
 
-# Download Saliency map & Trained model
-* saliency maps: [google](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing)
+* training images and "train.txt" file: [google](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing)
 
-* trained model: [google](https://drive.google.com/file/d/1S8za3FiPalP0wRqazjj060wm1Sc3XwrB/view?usp=sharing)
+# Download Relevant Necessary Data
 
 * R50+ViT-B pretrained model: [google](https://drive.google.com/file/d/1N9zbAX97GRGnxz122A2W2wjcK-U8dX68/view?usp=sharing)
 
+* edge maps: [google](https://drive.google.com/file/d/1Juzi-TZJfrB9iv_4UOYs60qn2VpZ033h/view?usp=sharing)
+
+* gray image: [google](https://drive.google.com/file/d/11D_NY9UyunpPp19NqtFZvNpDCwtkCN3l/view?usp=sharing)
+
+
+# Saliency map & Trained model
+
+
+* trained model: [google](https://drive.google.com/file/d/1S8za3FiPalP0wRqazjj060wm1Sc3XwrB/view?usp=sharing)
+
+* saliency maps: [google](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing)
+
 * initial pseudo-labels: [google](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing)
 
-* edge maps: [google](https://drive.google.com/file/d/1Juzi-TZJfrB9iv_4UOYs60qn2VpZ033h/view?usp=sharing)
+
+
 
 
 
 # Train Model
 
-1. [Point supervison](https://drive.google.com/file/d/1ZV2Bk1nZ3GRqcVvrabybSKT8N-1XsSH8/view?usp=sharing) and [edge maps]() are employed to generate [initial pseudo-labels](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing) (we provided the initial pseudo-labels and you can use it directly for training).
+1. Put the [R50+ViT-B pretrained model](https://drive.google.com/file/d/1N9zbAX97GRGnxz122A2W2wjcK-U8dX68/view?usp=sharing) into "models" folder.
 
-    Run ```python utils/EdgePoint2gt.py```
+2. Create the "dataset" folder in the main dirctory ("PSOD"). You should modify the ```create_link.sh``` file, then run it to create the soft link.
 
-2. Put the [R50+ViT-B pretrained model](https://drive.google.com/file/d/1N9zbAX97GRGnxz122A2W2wjcK-U8dX68/view?usp=sharing) into "models" folder.
+```
+|----dataset
+        |---edge
+        |---gray
+        |---image
+        |---json
+        |---train.txt
+        |---filled_correct_img_gt  # Run "utills/EdgePoint2gt.py"
+        |---filled_correct_mask  # Run "utills/EdgePoint2gt.py"
+```
 
-3. Set the path of the [training images](http://saliencydetection.net/duts/), edge maps and initial pseudo-labels in ```dataset_1st.py```, ```dataset_2nd.py```, ```test_DUTS.py```
 
-    Run ```bash train_nss_retrain.sh```
+
+[Point supervison](https://drive.google.com/file/d/1ZV2Bk1nZ3GRqcVvrabybSKT8N-1XsSH8/view?usp=sharing) (json) and [edge maps](https://drive.google.com/file/d/1Juzi-TZJfrB9iv_4UOYs60qn2VpZ033h/view?usp=sharing) (edge) are employed to generate [initial pseudo-labels](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing) (we provided the initial pseudo-labels and you can use it directly for training, or you can run ```python utils/EdgePoint2gt.py```) to make initial pseudo-labels.
+
+3. We organize all steps into a shell file, you can run ```bash edgepoint2gt_train_nss_retrain.sh``` to complete the entire training process.
+
+
+
+
 # Test Model
 
 1. Set the path of the test data in ```test.py```.
@@ -57,6 +84,13 @@ cd PSOD
     Run ```python test.py```
 
     The saliency maps will be saved in the "eval/maps" folder.
+
+3. We also provied the final saliency maps saliency maps: [google](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing).
+
+
+# Evaluation Code
+
+The "Eval_SingleMeth_MulDataset.py" in "Saliency-Evaluation-numpy" folder is used to evaluate the saliency maps.
 
 # Citation
 

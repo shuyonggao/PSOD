@@ -12,7 +12,8 @@ sal_path = "./DataStorage/DUTS-TR_transformer_crf"
 filled_img_pseudo_path = "./DataStorage/filled_transformer_crf_gt" 
 filled_mask_pseudo_path = './DataStorage/filled_transformer_crf_mask'
 
-json_path = '/home/gaosy/DATA/Gao_DUTS_TR/json'
+# json_path = '/home/gaosy/DATA/Gao_DUTS_TR/json'
+json_path = './dataset/json'
 
 if not os.path.exists(filled_img_pseudo_path):
     os.mkdir(filled_img_pseudo_path)
@@ -67,8 +68,8 @@ if not os.path.exists(filled_mask_pseudo_path):
     os.mkdir(filled_mask_pseudo_path)
 
 for file in file_list:
-    if "ILSVRC2012_test_00001446.png" in file:
-        print('stop')
+    # if "ILSVRC2012_test_00001446.png" in file:
+    #     print('stop')
 
     if (os.path.isfile(os.path.join(sal_path, file))):
         edge_map_orig = cv2.imread(os.path.join(sal_path, file), 0).astype(np.float32)
