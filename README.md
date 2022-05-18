@@ -42,11 +42,7 @@ cd PSOD
 
 * saliency maps: [google](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing)
 
-* initial pseudo-labels: [google](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing)
-
-
-
-
+* initial pseudo-labels: [google](https://drive.google.com/file/d/1JbMHpTuMP6egfFRFNAYaiLJapAK80M8Q/view?usp=sharing)
 
 
 # Train Model
