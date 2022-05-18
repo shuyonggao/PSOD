@@ -24,7 +24,7 @@ cd PSOD
 
 * point supervised DUTS: [google](https://drive.google.com/file/d/1ZV2Bk1nZ3GRqcVvrabybSKT8N-1XsSH8/view?usp=sharing)
 
-* training images and "train.txt" file: [google](https://drive.google.com/file/d/1TqIOXidkxkhq9nI0KBMApREam-EMnnr-/view?usp=sharing)
+* training images and "train.txt" file: [google](https://drive.google.com/file/d/1jhHRB_GfJ4_Sm3ZgoTRbVSC7vCOwq_7r/view?usp=sharing)
 
 # Download Relevant Necessary Data
 
