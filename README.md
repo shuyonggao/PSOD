@@ -1,5 +1,5 @@
 # PSOD (Point Saliency)
-# Weakly-Supervised Salient Object Detection Using Point Supervison
+# Weakly-Supervised Salient Object Detection Using Point Supervision
 
 
 ![image](https://user-images.githubusercontent.com/34783695/159275127-1a6bd023-5b97-427a-9f5c-4b4854656415.png)
@@ -93,7 +93,7 @@ The "Eval_SingleMeth_MulDataset.py" in "Saliency-Evaluation-numpy" folder is use
 *If you find this work is helpful, please cite our paper:
 ```
 @InProceedings{PSOD_aaai2022,
-  title={Weakly-Supervised Salient Object Detection Using Point Supervison},
+  title={Weakly-Supervised Salient Object Detection Using Point Supervision},
   author={Gao, Shuyong and Zhang, Wei and Wang, Yan and Guo, Qianyu and Zhang, Chenglong and He, Yangji and Zhang, Wenqiang},
   booktitle={AAAI},
   year={2022}
